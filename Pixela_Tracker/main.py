@@ -1,8 +1,13 @@
 import requests
 from datetime import datetime
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 USERNAME = "rahmathussain"
-TOKEN = "Gjfer5gH6J6Y7UtTh6jfGHJ57jhklncbc"
+TOKEN = os.getenv("TOKEN")
 
 create_user_url = "https://pixe.la/v1/users"
 
